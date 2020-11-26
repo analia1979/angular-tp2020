@@ -1,0 +1,22 @@
+<div class="card-group">
+    <div class="card" *ngFor='let producto of productos'>
+        <img [src]="producto.imagen" class="card-img-top" alt="...">
+        <div class="card-body">
+            <h5 class="card-title">{{producto.nombre|uppercase}}</h5>
+            <p class="card-text"><span>Marca:</span> {{producto.marca}}</p>
+            <p class="card-text"><span>Precio:</span> {{producto.precio|currency}}</p>
+
+            <p class="card-text"><span class="badge badge-warning" *ngIf="producto.stock===0 ;else mostrarStock">Sin
+                    Stock</span>
+                <ng-template #mostrarStock>Stock:{{producto.stock}}</ng-template>
+            </p>
+            <app-input-cantidad [(cantidad)]="producto.cantidad" [max]=producto.stock (maxReached)="maxReached($event)"
+                *ngIf="producto.stock">
+            </app-input-cantidad>
+            <button class=" btn btn-primary" (click)="addToCart(producto)" *ngIf="producto.stock">Comprar</button>
+
+        </div>
+    </div>
+
+
+</div>

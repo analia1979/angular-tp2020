@@ -1,0 +1,37 @@
+nav {
+   background: url(/assets/images/logo.jpg) no-repeat center bottom;
+  background-size: cover;
+  
+  transition: all 1s ease;
+}
+
+.navbar {
+  
+  padding-bottom: 1rem;
+  font-weight: 500;
+}
+
+.nav-bar a {
+  font-family: 'Roboto', 'sans-serif';
+  transition: .5s ease;
+}
+
+.nav-link {
+  color:darkgrey;
+}
+
+.nav-link:hover {
+  color:darkgrey;
+;
+}
+.logo{
+   /*  width:100px;
+    height:30px; */
+     min-width: 100px;
+  max-width: 150px;
+  margin-left: 25px;
+  margin-top: 10px;
+}
+footer{
+    background-color: darkgoldenrod;
+}

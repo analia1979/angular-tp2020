@@ -1,0 +1,20 @@
+<table class="table table-striped">
+    <thead>
+        <tr>
+            <th scope="col">Producto</th>
+            <th scope="col">Cantidad</th>
+            <th scope="col">Precio</th>
+            <th scope="col">Total</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let producto of (cartList$| async)">
+            <th scope="row">{{producto.nombre}}</th>
+            <td>{{producto.cantidad}}</td>
+            <td>{{producto.precio}}</td>
+            <td>{{producto.precio*producto.cantidad}}</td>
+        </tr>
+
+
+    </tbody>
+</table>
